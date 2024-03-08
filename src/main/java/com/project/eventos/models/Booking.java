@@ -92,4 +92,13 @@ public class Booking {
     public void setBookingPrice(double bookingPrice) {
         this.bookingPrice = bookingPrice;
     }
+
+	@Override
+	public String toString() {
+		return "Booking [bookingId=" + bookingId + ", customerId=" + customerId + ", eventId=" + eventId + ", ticketId="
+				+ ticketId + ", bookingTimestamp=" + bookingTimestamp + ", bookingQuantity=" + bookingQuantity
+				+ ", bookingPrice=" + bookingPrice + "]";
+	}
+    
+    
 }

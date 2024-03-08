@@ -102,5 +102,13 @@ public class Events {
         this.organizerId = organizerId;
     }
 
+
+	@Override
+	public String toString() {
+		return "Events [eventId=" + eventId + ", eventName=" + eventName + ", eventVenue=" + eventVenue + ", eventCity="
+				+ eventCity + ", eventDateTime=" + eventDateTime + ", eventDescription=" + eventDescription
+				+ ", organizerId=" + organizerId + "]";
+	}
+
     
 }
