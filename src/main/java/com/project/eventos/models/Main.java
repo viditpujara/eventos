@@ -98,7 +98,7 @@ public class Main {
 
                                 if (checkTicketRs.next()) {
                                     double ticketPrice = checkTicketRs.getDouble("ticket_price");
-                                    int ticketQuantity = checkTicketRs.getInt("ticket_quantity");
+//                                    int ticketQuantity = checkTicketRs.getInt("ticket_quantity");
 
                                     System.out.println("You Need To Pay Rs."+(int)(ticketPrice)*(tickQuant)+" to Buy the "+tickChoice+" ticket");
 
@@ -121,7 +121,7 @@ public class Main {
                             System.out.println("4. BANK TRANSFER");
                             
                             System.out.println("Enter Your Choice");
-                            int pay = scanner.nextInt();
+//                            int pay = scanner.nextInt();
                             
                             System.out.println("Thank You For your Confirmation Here is your "+tickQuant+" Tickets of "+tickChoice);
                               
@@ -252,7 +252,8 @@ public class Main {
                 e.printStackTrace();
 
             } 
-
+            
+            scanner.close();
         }
     }
 

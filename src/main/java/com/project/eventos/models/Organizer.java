@@ -4,7 +4,8 @@ public class Organizer {
     private int organizerId;
     private String organizerName;
     private String organizerMobile;
-    private String organizerEmail;
+    private String organizerEmail;	
+    private String organizerPassword;
     public static int counter = 0;
 
     {
@@ -15,19 +16,21 @@ public class Organizer {
         super();
     }
 
-    public Organizer(int organizerId, String organizerName, String organizerMobile, String organizerEmail) {
+    public Organizer(int organizerId, String organizerName, String organizerMobile, String organizerEmail, String organizerPassword) {
         this.organizerId = organizerId;
         this.organizerName = organizerName;
         this.organizerMobile = organizerMobile;
         this.organizerEmail = organizerEmail;
+        this.organizerPassword = organizerPassword;
         counter++;
     }
 
-    public Organizer(String organizerName, String organizerMobile, String organizerEmail) {
+    public Organizer(String organizerName, String organizerMobile, String organizerEmail, String organizerPassword) {
         this.organizerId = counter;
         this.organizerName = organizerName;
         this.organizerMobile = organizerMobile;
         this.organizerEmail = organizerEmail;
+        this.organizerPassword = organizerPassword;
     }
 
     public int getOrganizerId() {
@@ -61,6 +64,16 @@ public class Organizer {
     public void setOrganizerEmail(String organizerEmail) {
         this.organizerEmail = organizerEmail;
     }
+    
+    
+
+	public String getOrganizerPassword() {
+		return organizerPassword;
+	}
+
+	public void setOrganizerPassword(String organizerPassword) {
+		this.organizerPassword = organizerPassword;
+	}
 
 	@Override
 	public String toString() {
