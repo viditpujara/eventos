@@ -61,4 +61,11 @@ public class Organizer {
     public void setOrganizerEmail(String organizerEmail) {
         this.organizerEmail = organizerEmail;
     }
+
+	@Override
+	public String toString() {
+		return "Organizer [organizerId=" + organizerId + ", organizerName=" + organizerName + ", organizerMobile="
+				+ organizerMobile + ", organizerEmail=" + organizerEmail + "]";
+	}
+    
 }
