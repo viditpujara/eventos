@@ -24,7 +24,7 @@ public class Main {
             while (resultSet.next()) {
                 // Example: String value = resultSet.getString("column_name");
             	System.out.println(resultSet.getString("nothing"));
-            
+
             }
         } catch (SQLException e) {
             e.printStackTrace();

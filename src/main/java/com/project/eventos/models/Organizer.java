@@ -4,7 +4,7 @@ public class Organizer {
     private int organizerId;
     private String organizerName;
     private String organizerMobile;
-    private String organizerEmail;	
+    private String organizerEmail;
     private String organizerPassword;
     public static int counter = 0;
 
@@ -64,8 +64,8 @@ public class Organizer {
     public void setOrganizerEmail(String organizerEmail) {
         this.organizerEmail = organizerEmail;
     }
-    
-    
+
+
 
 	public String getOrganizerPassword() {
 		return organizerPassword;
@@ -80,5 +80,5 @@ public class Organizer {
 		return "Organizer [organizerId=" + organizerId + ", organizerName=" + organizerName + ", organizerMobile="
 				+ organizerMobile + ", organizerEmail=" + organizerEmail + "]";
 	}
-    
+
 }

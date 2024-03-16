@@ -99,6 +99,6 @@ public class Booking {
 				+ ticketId + ", bookingTimestamp=" + bookingTimestamp + ", bookingQuantity=" + bookingQuantity
 				+ ", bookingPrice=" + bookingPrice + "]";
 	}
-    
-    
+
+
 }

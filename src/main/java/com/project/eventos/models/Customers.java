@@ -3,7 +3,7 @@ package com.project.eventos.models;
 import java.sql.Date;
 
 public class Customers {
-    
+
 	private int customerId;
     private String customerName;
     private String customerMobileNumber;
@@ -12,13 +12,13 @@ public class Customers {
     private String password;
 
     public static int counter = 0;
-    
-    
+
+
     {
     	counter++;
     }
-    
-    
+
+
 
     public Customers() {
 		super();
@@ -33,7 +33,7 @@ public class Customers {
 
         counter++;
     }
-    
+
     public Customers(String customerName, String customerMobileNumber, String customerEmail, Date customerDob,String password) {
         this.customerId = counter;
         this.customerName = customerName;
@@ -94,7 +94,7 @@ public class Customers {
 	public String getCustomerPassword() {
 		return password;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Customers [customerId=" + customerId + ", customerName=" + customerName + ", customerMobileNumber="

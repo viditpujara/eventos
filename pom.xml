@@ -5,19 +5,43 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   
-<dependency>
-    <groupId>com.oracle.database.jdbc</groupId>
-    <artifactId>ojdbc11</artifactId>
-    <version>23.3.0.23.09</version> </dependency>
-    
-<repositories>
-    <repository>
-        <id>oracle</id>
-        <url>https://maven.oracle.com</url>
-    </repository>
-</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.sonatype.aether</groupId>
+			<artifactId>aether-api</artifactId>
+			<version>1.7</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.oracle.database.jdbc</groupId>
+		    <artifactId>ojdbc11</artifactId>
+		    <version>23.3.0.23.09</version> 
+	    </dependency>
+	    
+	   	<!-- https://mvnrepository.com/artifact/org.passay/passay -->
+		<dependency>
+		    <groupId>org.passay</groupId>
+		    <artifactId>passay</artifactId>
+		    <version>1.6.4</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>de.mkammerer</groupId>
+		    <artifactId>argon2-jvm</artifactId>
+		    <version>2.11</version>
+		</dependency>
 
 
+
+	
+	
+	</dependencies>
+	    
+	<repositories>
+	    <repository>
+	        <id>oracle</id>
+	        <url>https://maven.oracle.com</url>
+	    </repository>
+	</repositories>
   
   <build>
     <plugins>
