@@ -1,7 +1,10 @@
 package com.project.eventos.models;
-
-import java.io.IOException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
@@ -9,12 +12,14 @@ public class Main {
     static final String JDBC_URL = "jdbc:oracle:thin:@localhost:1521:xe"; // Adjust as per your Oracle instance
     static final String DB_USER = "Eventos";
     static final String DB_PASSWORD = "root";
-    
+
 
  // Place this method in your Main class
     public static void clearScreen() {
         // Clearing the screen by printing some empty lines
-        for (int i = 0; i < 50; ++i) System.out.println();
+        for (int i = 0; i < 50; ++i) {
+			System.out.println();
+		}
     }
 
 
@@ -23,7 +28,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean Status = true;
 
-        while (Status == true) {
+        while (Status) {
             System.out.println("Welcome to the Event Management System!");
             System.out.println("1. Login as User");
             System.out.println("2. Login as Organizer");
@@ -35,7 +40,7 @@ public class Main {
             int choice = scanner.nextInt();
 
             try (Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASSWORD)) {
-            	
+
                 if (choice == 1) {
                     // User Login
                     System.out.print("Enter username: ");
@@ -53,7 +58,7 @@ public class Main {
                         String eventQuery = "SELECT * FROM tbl_events";
                         try (PreparedStatement eventStmt = conn.prepareStatement(eventQuery);
                              ResultSet eventRs = eventStmt.executeQuery()) {
-                        
+
                             while (eventRs.next()) {
                                 System.out.println("Event Id: " + eventRs.getInt("event_id") +
                                         "|| Name: " + eventRs.getString("event_name") +
@@ -67,7 +72,7 @@ public class Main {
                             System.out.println("Enter Your choice: ");
                             int choiceId = scanner.nextInt();
                             scanner.nextLine();
-                            
+
                             String ticketQuery = "SELECT * FROM tbl_ticket_types WHERE event_id = ?";
                             try (PreparedStatement ticketStmt = conn.prepareStatement(ticketQuery)) {
                                 ticketStmt.setInt(1, choiceId);
@@ -80,16 +85,16 @@ public class Main {
                                             ", Quantity Available: " + ticketRs.getInt("ticket_quantity"));
                                 }
 
-                                
+
                             } catch (SQLException e) {
                                 e.printStackTrace();
                             }
-                            
+
                             System.out.println("Enter Which Type Of Ticket You Want: ");
                             String tickChoice = scanner.nextLine();
                             System.out.println("How much Tickets do you want: ");
                             int tickQuant = scanner.nextInt();
-                            
+
                             String checkTicketQuery = "SELECT * FROM tbl_ticket_types WHERE event_id = ? AND ticket_type = ?";
                             try (PreparedStatement checkTicketStmt = conn.prepareStatement(checkTicketQuery)) {
                                 checkTicketStmt.setInt(1, choiceId);
@@ -113,22 +118,22 @@ public class Main {
                             } catch (SQLException e) {
                                 e.printStackTrace();
                             }
-                            
+
                             System.out.println("Please Select Any Payment Method: ");
                             System.out.println("1. UPI");
                             System.out.println("2. DEBIT CARD");
                             System.out.println("3. CREDIT CARD");
                             System.out.println("4. BANK TRANSFER");
-                            
+
                             System.out.println("Enter Your Choice");
 //                            int pay = scanner.nextInt();
-                            
+
                             System.out.println("Thank You For your Confirmation Here is your "+tickQuant+" Tickets of "+tickChoice);
-                              
-                            
+
+
                         } catch (SQLException e) {
                             e.printStackTrace();
-                            }                        
+                            }
                     } else {
                         System.out.println("Invalid username or password.");
                     }
@@ -145,7 +150,7 @@ public class Main {
                     if (validateOrganizer(conn, username, password)) {
                         System.out.println("Welcome to Eventos " + username);
                         // Add further organizer functionalities like creating events
-                        
+
                         System.out.println("Create a New Event:");
 
                         // Prompt the organizer to input event details
@@ -181,7 +186,7 @@ public class Main {
                             e.printStackTrace();
                             System.out.println("An error occurred while creating the event.");
                         }
-                        
+
                     } else {
                         System.out.println("Invalid username or password.");
                     }
@@ -214,7 +219,7 @@ public class Main {
                     System.out.println("User registered successfully.");
                     System.out.println("Now You Can Login To Your Account");
 
-                    
+
 
                 } else if (choice == 4) {
                     // Organizer Registration
@@ -241,18 +246,18 @@ public class Main {
                     System.out.println("Now You Can Login To Your Account");
 
                 }
-                
+
                 else if(choice==5) {
                 	System.out.println("Thanks a Lot For Using our System Visit Again");
-                	
+
                 }
 
 
             } catch (SQLException e) {
                 e.printStackTrace();
 
-            } 
-            
+            }
+
             scanner.close();
         }
     }

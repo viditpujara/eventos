@@ -23,7 +23,7 @@ public class Payment {
         this.price = price;
         this.referenceId = referenceId;
         this.paymentStatus = paymentStatus;
-        this.paymentMethod = paymentMethod; 
+        this.paymentMethod = paymentMethod;
         counter++;
    }
 
@@ -33,7 +33,7 @@ public class Payment {
         this.price = price;
         this.referenceId = referenceId;
         this.paymentStatus = paymentStatus;
-        this.paymentMethod = paymentMethod; 
+        this.paymentMethod = paymentMethod;
    }
 
     public int getPaymentId() {
@@ -89,6 +89,6 @@ public class Payment {
 		return "Payment [paymentId=" + paymentId + ", bookingId=" + bookingId + ", price=" + price + ", referenceId="
 				+ referenceId + ", paymentStatus=" + paymentStatus + ", paymentMethod=" + paymentMethod + "]";
 	}
-    
-    
+
+
 }

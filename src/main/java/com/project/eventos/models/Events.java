@@ -11,12 +11,12 @@ public class Events {
     private String eventDescription;
     private int organizerId;
     public static int counter = 0;
-    
-    
+
+
     {
         counter++;
     }
-    
+
 
     public Events() {
         super();
@@ -33,7 +33,7 @@ public class Events {
         this.organizerId = organizerId;
         counter++;
     }
-    
+
     public Events(String eventName, String eventVenue, String eventCity, Date eventDateTime, String eventDescription, int organizerId) {
         this.eventId = counter;
         this.eventName = eventName;
@@ -45,7 +45,7 @@ public class Events {
     }
 
     // Getter and Setter methods for each attribute
-    
+
     public int getEventId() {
         return eventId;
     }
@@ -110,5 +110,5 @@ public class Events {
 				+ ", organizerId=" + organizerId + "]";
 	}
 
-    
+
 }
