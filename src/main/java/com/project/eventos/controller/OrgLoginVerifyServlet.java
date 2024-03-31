@@ -1,4 +1,4 @@
-package com.project.eventos.services;
+package com.project.eventos.controller;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

@@ -17,7 +17,7 @@
 		    <version>23.3.0.23.09</version> 
 	    </dependency>
 	    
-	   	<!-- https://mvnrepository.com/artifact/org.passay/passay -->
+	   	 <!--https://mvnrepository.com/artifact/org.passay/passay--> 
 		<dependency>
 		    <groupId>org.passay</groupId>
 		    <artifactId>passay</artifactId>
@@ -29,10 +29,90 @@
 		    <artifactId>argon2-jvm</artifactId>
 		    <version>2.11</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
+		<dependency>
+		    <groupId>org.bouncycastle</groupId>
+		    <artifactId>bcprov-jdk15on</artifactId>
+		    <version>1.70</version>
+		</dependency>
+		
+		<!-- new -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>4.0.0</version>
+		    <scope>provided</scope>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.4.7</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.activation/javax.activation-api -->
+		<dependency>
+		    <groupId>javax.activation</groupId>
+		    <artifactId>javax.activation-api</artifactId>
+		    <version>1.2.0</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.eclipse.angus/jakarta.mail -->
+		<dependency>
+		    <groupId>org.eclipse.angus</groupId>
+		    <artifactId>jakarta.mail</artifactId>
+		    <version>1.0.0</version>
+		</dependency>
 
-	
+		<!-- https://mvnrepository.com/artifact/jakarta.mail/jakarta.mail-api -->
+		<dependency>
+		    <groupId>jakarta.mail</groupId>
+		    <artifactId>jakarta.mail-api</artifactId>
+		    <version>2.1.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/jakarta.activation/jakarta.activation-api -->
+		<dependency>
+		    <groupId>jakarta.activation</groupId>
+		    <artifactId>jakarta.activation-api</artifactId>
+		    <version>2.1.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.eclipse.angus/angus-activation -->
+		<dependency>
+		    <groupId>org.eclipse.angus</groupId>
+		    <artifactId>angus-activation</artifactId>
+		    <version>1.0.0</version>
+		</dependency>
+
 	
 	</dependencies>
 	    

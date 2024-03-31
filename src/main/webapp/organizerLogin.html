@@ -1,9 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
+<html lang="en">
 
     <!-- Basic -->
     <meta charset="utf-8">
@@ -14,7 +10,6 @@
  
      <!-- Site Metas -->
     <title>Eventos</title>  
-    
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -36,8 +31,14 @@
 
     <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
+<body>  
     <!-- LOADER -->
     <div id="preloader">
         <div class="loader">
@@ -84,7 +85,7 @@
     <div class="login1"><img src="uploads/login1.webp" alt="" class="loginimg">
         <div class="wrapper">
             <h2>Organization Login</h2>
-            <form action="OrgLogin" method="post">
+            <form action="organizerLogin" method="post">
               <!-- <div class="input-box">
                 <input type="text" placeholder="Enter your name" required>
               </div> -->

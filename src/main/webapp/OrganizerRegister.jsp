@@ -5,8 +5,6 @@
 <head>
 <meta charset="ISO-8859-1">
 
-    <!-- Basic -->
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
    
     <!-- Mobile Metas -->
@@ -28,7 +26,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
@@ -70,7 +68,7 @@
                         <li><a href="about-us.html">About us</a></li>
                         <li><a href="events.html">Events</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a class="active" href="CustomerLogin.html">Login</a></li>     
+                        <li><a class="active" href="login.html">Login</a></li>     
                     </ul>
                 </div>
             </div>
@@ -79,36 +77,39 @@
 
 
     
-    
    
-    <div class="login1"><img src="uploads/login1.webp" alt="" class="loginimg">
-        <div class="wrapper">
-            <h2>Organization Login</h2>
-            <form action="OrgLogin" method="post">
-              <!-- <div class="input-box">
-                <input type="text" placeholder="Enter your name" required>
-              </div> -->
-              <div class="input-box">
-                <input type="text" name="email" id="email" placeholder="Email" required>
-              </div>
-               <div class="input-box">
-                <input type="password"name="password" id="password" placeholder="Password" required>
-              </div>
-              <!-- <div class="input-box">
-                <input type="password" placeholder="Confirm password" required>
-              </div>  -->
-              <!-- <div class="policy">
-                <input type="checkbox">
-                <h3> <br>I accept all terms & condition</h3>
-              </div> -->
-              <div class="input-box button">
-               <a href="organizerhome.html"> <input type="Submit" value="Login"> </a>
-              </div>
-              <div class="text">
-                <h3>Do not have an account? <a href="organizerRegister.html">Register now</a></h3>
-              </div>
+    <div class="login1"><img src="/uploads/reg1.jpg" alt="" class="registerimg">
+        <div class="wrapper ">
+            <h2>Organization Registration</h2>
+            <form action="OrgRegister">
+                
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your name" required>
+                </div> 
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your Email" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Confirm password" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Mobile Number" required>
+                </div>  
+                <div class="policy">
+                    <input type="checkbox" required>
+                    <h3> <br>I accept all terms & condition</h3>
+                </div>
+                <div class="input-box button">
+                    <input type="Submit" value="Register">
+                </div>
+                <div class="text">
+                    <h3>Already have an account? <a href="login2.html">Sign in</a></h3>
+                </div>
             </form>
-          </div>
+        </div>
     </div>
 
 
@@ -154,16 +155,11 @@
 								<input placeholder="Subscribe our newsletter.." name="search">
 								<i class="fa fa-envelope-o"></i>
 							</form>
-
 						</div>                        
                     </div><!-- end clearfix -->
                 </div><!-- end col -->
             </div><!-- end row -->
-            <div class="organreg">
-              <a href="login2.html"><h4>Login as an Organization</h4></a>
-            </div>
         </div><!-- end container -->
-        
     </footer><!-- end footer -->
 
     <div class="copyrights">
@@ -186,5 +182,16 @@
     <script src="js/custom.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/hoverdir.js"></script>    
+
+
+
+    <script>
+        var hidden = document.getElementById('hidden');
+        var selector = document.getElementById('accountType')
+        selector.addEventListener('change',(event)=>{
+            hidden.classList.toggle('invisible')
+        })
+        
+    </script>  
 </body>
 </html>

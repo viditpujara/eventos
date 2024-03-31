@@ -1,9 +1,3 @@
-package com.project.eventos.utility;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
 /**
  * @author Vidit Pujara
  * @version 1.0
@@ -21,6 +15,13 @@ import java.sql.SQLException;
  * This class is used to establish a connection to the database and close the connection.
  * It uses the JDBC driver to connect to the Oracle SQL server.
  */
+
+package com.project.eventos.utility;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class DatabaseConnector {
 
     private static final String JDBC_URL = "jdbc:oracle:thin:@localhost:1521:xe"; // URL of the Oracle SQL server

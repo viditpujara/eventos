@@ -236,11 +236,11 @@ public class Main {
                     // Register the organizer
                     Organizer org = new Organizer();
                     org.setOrganizerName(username);
-                    org.setOrganizerPassword(password);
+//                    org.setOrganizerPassword(password);
                     org.setOrganizerMobile(mobno);
                     org.setOrganizerEmail(email);
 
-                    registerOrganizer(conn, org.getOrganizerName(), org.getOrganizerMobile(), org.getOrganizerEmail(), org.getOrganizerPassword());
+//                    registerOrganizer(conn, org.getOrganizerName(), org.getOrganizerMobile(), org.getOrganizerEmail()/*, org.getOrganizerPassword()*/);
                     clearScreen();
                     System.out.println("Organizer registered successfully.");
                     System.out.println("Now You Can Login To Your Account");

@@ -56,7 +56,7 @@ public class Events {
     private int eventId;
     private String eventName;
     private String eventVenue;
-    private int eventCatagory;
+    private int eventCategory;
     private int eventCity;
     private Date eventDateTime;
     private String eventDescription;
@@ -78,19 +78,19 @@ public class Events {
 	 * @param eventId
 	 * @param eventName
 	 * @param eventVenue
-	 * @param eventCatagory
+	 * @param eventCategory
 	 * @param eventCity
 	 * @param eventDateTime
 	 * @param eventDescription
 	 * @param eventBanner
 	 * @param organizerId
 	 */
-	public Events(int eventId, String eventName, String eventVenue, int eventCatagory, int eventCity,
+	public Events(int eventId, String eventName, String eventVenue, int eventCategory, int eventCity,
 			Date eventDateTime, String eventDescription, String eventBanner, int organizerId) {
 		this.eventId = eventId;
 		this.eventName = eventName;
 		this.eventVenue = eventVenue;
-		this.eventCatagory = eventCatagory;
+		this.eventCategory = eventCategory;
 		this.eventCity = eventCity;
 		this.eventDateTime = eventDateTime;
 		this.eventDescription = eventDescription;
@@ -116,7 +116,7 @@ public class Events {
 			String eventDescription, String eventBanner, int organizerId) {
 		this.eventName = eventName;
 		this.eventVenue = eventVenue;
-		this.eventCatagory = eventCatagory;
+		this.eventCategory = eventCatagory;
 		this.eventCity = eventCity;
 		this.eventDateTime = eventDateTime;
 		this.eventDescription = eventDescription;
@@ -186,7 +186,7 @@ public class Events {
 	 * @return String: eventBanner
 	 */
 	public int getEventCatagory() {
-		return eventCatagory;
+		return eventCategory;
 	}
 	
 	/**
@@ -195,7 +195,7 @@ public class Events {
 	 * @param eventBanner: String
 	 */
 	public void setEventCatagory(int eventCatagory) {
-		this.eventCatagory = eventCatagory;
+		this.eventCategory = eventCatagory;
 	}
 	
 	/** 
@@ -294,6 +294,5 @@ public class Events {
 				+ eventCity + ", eventDateTime=" + eventDateTime + ", eventDescription=" + eventDescription
 				+ ", organizerId=" + organizerId + "]";
 	}
-
 
 }
